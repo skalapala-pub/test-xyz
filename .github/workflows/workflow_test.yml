@@ -31,7 +31,7 @@ jobs:
         run: |
           result=$(./.github/workflows/id_devices.sh)
           echo result is $result
-          echo "result=$result" >> $GITHUB_ENV
+          echo "result=$result" | tee -a $GITHUB_ENV
 
 
       # Runs a set of commands using the runners shell
