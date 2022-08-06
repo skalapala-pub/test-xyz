@@ -17,6 +17,8 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
+    env:
+      result: "abc"
     # The type of runner that the job will run on
     runs-on: self-hosted
 
@@ -28,8 +30,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run id_devices.sh
         run: |
+          echo result is $result
           result=$(./.github/workflows/id_devices.sh)
-          echo $result
+          echo result is $result
 
 
       # Runs a set of commands using the runners shell
