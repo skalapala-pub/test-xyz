@@ -31,7 +31,7 @@ jobs:
       - name: Run id_devices.sh
         run: |
           echo result is $result
-          result=$(./.github/workflows/id_devices.sh)
+          $result=$(./.github/workflows/id_devices.sh)
           echo result is $result
 
 
